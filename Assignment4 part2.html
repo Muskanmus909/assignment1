@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!--
+Name: Muskan
+File: Assignment4 Part2.html
+Date: 01 Dec 2025
+This file runs the Image Gallery task.
+-->
+<title>Image gallery example</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Image gallery example</h1>
+
+<div class="full-img">
+  <img class="displayed-img" src="pic1.jpg" alt="Closeup of a human eye" />
+  <div class="overlay"></div>
+  <button class="dark">Darken</button>
+</div>
+
+<div class="thumb-bar"></div>
+
+<script>
+// Array of image objects
+const images = [
+  { filename: 'pic1.jpg', alt: 'Closeup of a human eye' },
+  { filename: 'pic2.jpg', alt: 'Rock that looks like a wave' },
+  { filename: 'pic3.jpg', alt: 'Purple and white pansies' },
+  { filename: 'pic4.jpg', alt: 'Section of wall from a pharaoh\'s tomb' },
+  { filename: 'pic5.jpg', alt: 'Large moth on a leaf' }
+];
+
+const displayedImage = document.querySelector('.displayed-img');
+const thumbBar = document.querySelector('.thumb-bar');
+const btn = document.querySelector('button');
+const overlay = document.querySelector('.overlay');
+
+// Create thumbnails
+images.forEach(img => {
+  const thumbImage = document.createElement('img');
+  thumbImage.src = img.filename;
+  thumbImage.alt = img.alt;
+  thumbBar.appendChild(thumbImage);
+
+  thumbImage.addEventListener('click', () => {
+    displayedImage.src = img.filename;
+    displayedImage.alt = img.alt;
+  });
+});
+
+// Overlay toggle
+btn.addEventListener('click', () => {
+  if (btn.classList.contains('dark')) {
+    btn.classList.remove('dark');
+    btn.classList.add('light');
+    btn.textContent = 'Lighten';
+    overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+  } else {
+    btn.classList.remove('light');
+    btn.classList.add('dark');
+    btn.textContent = 'Darken';
+    overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+  }
+});
+</script>
+
+</body>
+</html>

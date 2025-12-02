@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <!--
+  Name: Muskan
+  File: Assignment4_Part5.html
+  Date: 01 Dec 2025
+  This file runs the Forms Challenge task.
+  -->
+
+  <title>Forms challenge</title>
+  <link href="style.css" rel="stylesheet" />
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <h1>We want your feedback!</h1>
+  <p>
+    We're very excited that you visited the little house in the woods,
+    and we want to hear what you thought of it! Please fill in the sections below.
+    You don't need to provide your name or contact details, but if you do,
+    we'll enter you into a prize draw!
+  </p>
+
+  <form>
+
+    <!-- FACILITIES SECTION -->
+    <fieldset class="form-section">
+      <legend>Facilities</legend>
+
+      <p>Was the porridge</p>
+      <label><input type="radio" name="porridge" value="hot">Too hot?</label>
+      <label><input type="radio" name="porridge" value="cold">Too cold?</label>
+      <label><input type="radio" name="porridge" value="right">Just right?</label>
+
+      <br><br>
+
+      <p>Were the beds</p>
+      <label><input type="radio" name="beds" value="hard">Too hard?</label>
+      <label><input type="radio" name="beds" value="soft">Too soft?</label>
+      <label><input type="radio" name="beds" value="right">Just right?</label>
+
+      <br><br>
+
+      <p>Describe the chairs (select all that apply)</p>
+      <label><input type="checkbox" name="chairs" value="comfy">Comfy</label>
+      <label><input type="checkbox" name="chairs" value="luxurious">Luxurious</label>
+      <label><input type="checkbox" name="chairs" value="hi-tec">Hi tec</label>
+      <label><input type="checkbox" name="chairs" value="pretty">Pretty</label>
+      <label><input type="checkbox" name="chairs" value="majestic">Majestic</label>
+    </fieldset>
+
+    <div class="separator"></div>
+
+    <!-- HOSTS SECTION -->
+    <fieldset class="form-section">
+      <legend>About your hosts</legend>
+
+      <p>Who's your favorite bear?</p>
+      <label><input type="radio" name="bear" value="papa">Papa bear</label>
+      <label><input type="radio" name="bear" value="mama">Mama bear</label>
+      <label><input type="radio" name="bear" value="junior">Junior</label>
+      <label><input type="radio" name="bear" value="dozer">Dozer</label>
+
+      <br><br>
+
+      <p>Which greeting did you prefer?</p>
+      <label><input type="radio" name="greeting" value="wave">Wave</label>
+      <label><input type="radio" name="greeting" value="friendly">Friendly greeting</label>
+      <label><input type="radio" name="greeting" value="growl">Growl</label>
+      <label><input type="radio" name="greeting" value="claw">Claw marks in the door</label>
+    </fieldset>
+
+    <div class="separator"></div>
+
+    <!-- FEEDBACK -->
+    <fieldset class="form-section">
+      <legend>Any other feedback?</legend>
+      <label for="comments">Give us your comments</label>
+      <textarea id="comments" name="comments"></textarea>
+    </fieldset>
+
+    <div class="separator"></div>
+
+    <!-- USER DETAILS -->
+    <fieldset class="form-section">
+      <legend>Your details (optional)</legend>
+
+      <div class="separator">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" />
+      </div>
+
+      <div class="separator">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" />
+      </div>
+
+      <div class="separator">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" name="phone" />
+      </div>
+
+    </fieldset>
+
+    <!-- SUBMIT -->
+    <button type="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>
